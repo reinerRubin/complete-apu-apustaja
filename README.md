@@ -1,4 +1,4 @@
-# completer helper
+# complete helper
 
 ## basic build and launch
 ```
