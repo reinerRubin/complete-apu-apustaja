@@ -1,0 +1,14 @@
+version: '3.4'
+services:
+  completer:
+    container_name: completer
+    build:
+      dockerfile: Dockerfile
+      context: .
+      target: release
+    ports:
+    - "7866:7866"
+    environment:
+      - QUERY_CACHE_TTL_SECONDS=20
+      - PORT=7866
+      - DUMP_HTTP=true
