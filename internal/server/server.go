@@ -71,7 +71,7 @@ func (s *Server) Stop() error {
 func (s *Server) run() error {
 	go func() {
 		if err := s.httpServer.ListenAndServe(); err != http.ErrServerClosed {
-			log.Fatalf("server has stopped: %s", err)
+			log.Printf("server has stopped: %s", err)
 			s.errChan <- err
 		}
 	}()
